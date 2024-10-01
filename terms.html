@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PrimeReact Basic Template with Luna Green Theme</title>
+
+		<!-- PrimeReact Theme CSS (Lara Light Green) -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/primereact/10.8.2/resources/themes/lara-light-green/theme.min.css"
+		/>
+
+		<!-- PrimeReact Core CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/primereact/10.8.2/resources/primereact.min.css"
+		/>
+
+		<!-- PrimeIcons CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/primeicons/7.0.0/primeicons.min.css"
+		/>
+
+		<!-- PrimeCSS -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/primeflex@latest/primeflex.css"
+		/>
+
+		<!-- Open Sauce Font -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.cdnfonts.com/css/open-sauce-one"
+		/>
+
+		<!-- React and ReactDOM -->
+		<script
+			src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+			crossorigin
+		></script>
+		<script
+			src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+			crossorigin
+		></script>
+		<script
+			src="https://unpkg.com/react-transition-group@2.4.0/dist/react-transition-group.js"
+			crossorigin
+		></script>
+		<script
+			src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js"
+			crossorigin
+		></script>
+
+		<!-- PrimeReact -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/primereact/10.8.2/primereact.all.js"
+			crossorigin
+		></script>
+	</head>
+	<style>
+		.app {
+			height: fit-content;
+			font-family: "Open Sauce One", sans-serif;
+			color: #101010;
+			background-color: #eeece8;
+		}
+
+		.h-400 {
+			height: 400px;
+		}
+
+		.mbs-0 {
+			margin-block-start: 0;
+		}
+
+		.mbe-0 {
+			margin-block-end: 0;
+		}
+
+		.mis-0 {
+			margin-inline-start: 0;
+		}
+
+		.mie-0 {
+			margin-inline-end: 0;
+		}
+
+		.px-25 {
+			padding-left: 25%;
+			padding-right: 25%;
+		}
+
+		.flex-2 {
+			flex: 2 1 0% !important;
+		}
+
+		.cover {
+			object-fit: cover;
+		}
+
+		.content-row {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			gap: 16pt;
+		}
+
+		.logo-element {
+			fill: #276141;
+			stroke-width: 0px;
+		}
+
+		.title {
+			color: #eeece8;
+			background-color: #276141;
+		}
+
+		p {
+			font-size: 14pt;
+			line-height: 18pt;
+		}
+
+		hr {
+			height: 1px;
+			background-color: #276141;
+		}
+	</style>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel" data-presets="react,stage-3">
+			const { Accordion, AccordionTab, Menubar, ScrollTop } = primereact;
+
+			function App() {
+				const items = [
+					{
+						template: (item, options) => {
+							return (
+								<a
+									href="#"
+									className={options.className}
+									onClick={options.onClick}
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 1024 1024"
+										width="24px"
+										height="24px"
+									>
+										<path
+											class="logo-element"
+											d="M826.46,602.05s-14.04,5.22-28.05,10.41c-6.94,2.69-13.88,5.35-19.07,7.37-5.19,2.1-8.66,3.47-8.66,3.47,0,0,4.76,3.34,11.67,8.61,16.84,12.88,33.08,26.57,48.9,40.8,34.75,31.26,67.41,65.23,100.01,99.23,11.51-18.48,21.79-37.79,30.8-57.8-42.18-38.76-84.92-77.01-132.15-109.69-2.18-1.53-3.44-2.39-3.44-2.39"
+										/>
+										<path
+											class="logo-element"
+											d="M495.56,426.38c-8.47-3.34-14.12-5.57-14.12-5.57,0,0-8.85,5.68-17.67,11.35-8.77,5.73-17.51,11.43-17.51,11.43,0,0,5.35,2.31,13.4,5.81,8.04,3.42,18.75,8.12,29.37,12.94,10.68,4.73,21.28,9.66,29.21,13.37,7.93,3.71,13.21,6.19,13.21,6.19,0,0,9.9-6,19.8-11.97,10.01-5.94,19.98-11.89,19.98-11.89,0,0-5.57-2.42-13.93-6.05-8.34-3.68-19.58-8.37-30.8-13.05-11.16-4.73-22.51-9.12-30.93-12.56"
+										/>
+										<path
+											class="logo-element"
+											d="M549.12,372.83c165.61,41.56,317.74,107.81,453.93,188.47,1.61-16.22,2.47-32.65,2.47-49.3,0-272.12-221.39-493.52-493.52-493.52-195.87,0-365.43,114.69-445.1,280.41,154.07,8.98,316.77,32.44,482.22,73.94"
+										/>
+										<path
+											class="logo-element"
+											d="M702.16,523.61c-10.73-5.89-21.3-12.02-29.45-16.22-8.12-4.25-13.53-7.1-13.53-7.1,0,0-11.3,5.81-22.57,11.62-11.24,5.89-22.38,12.08-22.38,12.08,0,0,1.29.67,3.52,1.88,2.21,1.24,5.43,2.88,9.17,5.08,7.53,4.33,17.59,10.11,27.62,15.87,9.9,6.03,19.8,12.05,27.22,16.57,3.74,2.23,6.78,4.2,8.9,5.57,2.12,1.37,3.34,2.15,3.34,2.15,0,0,12.51-5.76,25.04-11.54,6.32-2.82,12.67-5.68,17.4-7.8,4.79-2.07,7.96-3.44,7.96-3.44,0,0-1.26-.83-3.6-2.18-2.29-1.37-5.59-3.31-9.55-5.65-7.96-4.57-18.34-11.08-29.1-16.89"
+										/>
+										<path
+											class="logo-element"
+											d="M484.43,606.52c-131.1-109.26-276.86-205.71-427.73-284.87-24.61,58.61-38.22,122.92-38.22,190.35,0,272.12,221.39,493.52,493.52,493.52,92.34,0,205.04-25.5,277.37-86.5-11.92-28.3-44.19-56.24-64.82-79.54-23.78-26.87-48.23-53.15-73.3-78.81-51.27-52.5-105.17-102.45-161.41-149.63-1.8-1.51-3.6-3.01-5.41-4.52"
+										/>
+										<path
+											class="logo-element"
+											d="M142.78,317.93c-6.91-1.48-11.54-2.47-11.54-2.47l-19.53,15.87s4.41,1.13,11.03,2.82c6.64,1.72,15.49,3.9,24.29,6.35,17.67,4.68,35.21,9.74,35.21,9.74l22.57-17.7s-4.6-1.13-11.46-2.82c-6.89-1.64-16.08-3.85-25.26-6.05-9.2-2.07-18.4-4.17-25.31-5.73"
+										/>
+										<path
+											class="logo-element"
+											d="M312.56,362.33c-8.69-2.58-14.5-4.3-14.5-4.3,0,0-6.67,4.9-13.34,9.79-6.62,4.95-13.23,9.9-13.23,9.9,0,0,5.54,1.86,13.83,4.63,8.28,2.85,19.37,6.54,30.34,10.52,11.03,3.87,22,7.83,30.21,10.92,8.2,3.04,13.69,5.08,13.69,5.08,0,0,7.67-5.38,15.33-10.73,7.72-5.33,15.44-10.68,15.44-10.68,0,0-5.73-1.94-14.34-4.87-8.63-2.82-20.12-6.59-31.63-10.36-11.57-3.6-23.13-7.21-31.79-9.9"
+										/>
+									</svg>
+								</a>
+							);
+						},
+						command: () => {
+							window.location.href = "index.html";
+						},
+					},
+					{
+						label: "Resources",
+						icon: "pi pi-link",
+						items: [
+							{
+								label: "ECG VDA Emissions Calculation Dec 2023",
+								url: "https://www.ecgassociation.eu/wp-content/uploads/2023/12/2023-ECG_VDA_Emissions-calculation-and-reporting-guideline-for-automotive-supply-chains-FINAL.pdf",
+							},
+							{
+								label: "GLEC Framework - Version 3.0",
+								url: "https://www.smartfreightcentre.org/en/about-sfc/news/a-solid-foundation-to-further-accelerate-freight-decarbonization-smart-freight-centre-releases-updated-glec-framework-version-30/",
+							},
+						],
+					},
+					{
+						label: "Libraries",
+						icon: "pi pi-wrench",
+						items: [
+							{
+								label: "Python",
+								url: "https://github.com/transporting-wheels/emissions-py",
+							},
+							{
+								label: "TypeScript",
+								url: "https://github.com/transporting-wheels/emissions-ts",
+							},
+						],
+					},
+					{
+						label: "Terms",
+						icon: "pi pi-book",
+						command: () => {
+							window.location.href = "#";
+						},
+					},
+				];
+
+				return (
+					<div class="flex flex-column app">
+						<Menubar model={items} />
+						<ScrollTop />
+						<div class="flex flex-column pt-4 pb-0 px-25"></div>
+					</div>
+				);
+			}
+
+			ReactDOM.render(
+				React.createElement(App),
+				document.getElementById("root")
+			);
+		</script>
+	</body>
+</html>
