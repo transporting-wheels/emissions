@@ -5,6 +5,10 @@
     background-color: #eeece8;
 }
 
+.app-full {
+    min-height: 100vh;
+}
+
 .h-400 {
     height: 400px;
 }
