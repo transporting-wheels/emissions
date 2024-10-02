@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PrimeReact Basic Template with Luna Green Theme</title>
+		<title>Transporting Wheels Emissions Calculation</title>
+
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
 
 		<!-- PrimeReact Theme CSS (Lara Light Green) -->
 		<link
@@ -131,7 +134,7 @@
 		<div id="root"></div>
 
 		<script type="text/babel" data-presets="react,stage-3">
-			const { Accordion, AccordionTab, Menubar, ScrollTop } = primereact;
+			const { Column, DataTable, Menubar, ScrollTop } = primereact;
 
 			function App() {
 				const items = [
@@ -222,11 +225,155 @@
 					},
 				];
 
+				const terms = [
+					{
+						term: "Adjusted mass",
+						definition:
+							"The mass used for emission calculations, which may be modified from the actual mass to account for factors like vehicle capacity utilization.",
+					},
+					{
+						term: "CO2e (Carbon dioxide equivalent)",
+						definition:
+							"A standard unit for measuring greenhouse gas emissions, expressing the impact of different gases in terms of the amount of CO2 that would create the same amount of warming.",
+					},
+					{
+						term: "Consignment",
+						definition:
+							"A shipment of goods being transported from one point to another.",
+					},
+					{
+						term: "Default data",
+						definition:
+							"Standardized values or assumptions used in calculations when specific data is unavailable, similar to secondary data but often more generalized.",
+					},
+					{
+						term: "Distance Adjustment Factor (DAF)",
+						definition:
+							"A factor used to account for deviations between the shortest feasible distance and the actual driven distance.",
+					},
+					{
+						term: "Emission factor",
+						definition:
+							"The amount of CO2e emitted per unit of activity, usually expressed in grams of CO2e per tonne-kilometer.",
+					},
+					{
+						term: "Emission intensity",
+						definition:
+							"The amount of CO2e emitted per unit of transport activity, typically expressed in grams of CO2e per tonne-kilometer.",
+					},
+					{
+						term: "Empty running",
+						definition:
+							"The distance traveled by a vehicle without cargo.",
+					},
+					{
+						term: "Energy consumption factor (ECF)",
+						definition:
+							"The amount of energy consumed per unit of transport activity, often expressed in megajoules per tonne-kilometer.",
+					},
+					{
+						term: "Fuel consumption",
+						definition:
+							"The amount of fuel used by a vehicle, typically measured in liters or gallons.",
+					},
+					{
+						term: "Gross vehicle weight (GVW)",
+						definition:
+							"The total weight of a vehicle including its cargo, fuel, and passengers.",
+					},
+					{
+						term: "Journey",
+						definition:
+							"The complete trip from origin to destination, which may consist of multiple legs.",
+					},
+					{
+						term: "Leg",
+						definition:
+							"A segment of a journey between two points, often representing a single mode of transport.",
+					},
+					{
+						term: "Load factor",
+						definition:
+							"The ratio of actual cargo weight to maximum payload capacity of a vehicle.",
+					},
+					{
+						term: "Payload",
+						definition: "The weight of cargo carried by a vehicle.",
+					},
+					{
+						term: "Primary data",
+						definition:
+							"Actual measured data from specific transport operations, such as fuel consumption or distance traveled.",
+					},
+					{
+						term: "Propulsion type",
+						definition:
+							"The method by which a vehicle is powered, such as internal combustion engine, electric motor, or hybrid system.",
+					},
+					{
+						term: "Secondary data",
+						definition:
+							"Modeled or estimated data used when primary data is not available.",
+					},
+					{
+						term: "Shortest Feasible Distance (SFD)",
+						definition:
+							"The most practical and realistic shortest route between two points, considering road restrictions and regulations.",
+					},
+					{
+						term: "Tank-to-Wheel (TTW) emissions",
+						definition:
+							"Emissions from fuel combustion during vehicle operation.",
+					},
+					{
+						term: "Transport activity",
+						definition:
+							"The product of cargo weight and distance traveled, typically measured in tonne-kilometers.",
+					},
+					{
+						term: "Transport Operation Category (TOC)",
+						definition:
+							"A grouping of transport operations with similar characteristics for emission calculation purposes.",
+					},
+					{
+						term: "Utilization rate",
+						definition:
+							"The percentage of a vehicle's capacity that is being used during a journey.",
+					},
+					{
+						term: "Vehicle type",
+						definition:
+							"The category of vehicle used for transport, which affects fuel efficiency and emissions.",
+					},
+					{
+						term: "Well-to-Tank (WTT) emissions",
+						definition:
+							"Emissions associated with fuel production and distribution before it reaches the vehicle.",
+					},
+					{
+						term: "Well-to-Wheel (WTW) emissions",
+						definition:
+							"The sum of WTT and TTW emissions, representing total lifecycle emissions.",
+					},
+				];
+
 				return (
 					<div class="flex flex-column app">
 						<Menubar model={items} />
 						<ScrollTop />
-						<div class="flex flex-column pt-4 pb-0 px-25"></div>
+						<div class="flex flex-column pt-4 pb-0 px-25">
+							<DataTable value={terms} size="large">
+								<Column
+									field="term"
+									header="Term"
+									style={{ width: "25%" }}
+								></Column>
+								<Column
+									field="definition"
+									header="Definition"
+								></Column>
+							</DataTable>
+						</div>
 					</div>
 				);
 			}
