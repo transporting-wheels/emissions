@@ -223,6 +223,21 @@
 							window.location.href = "#";
 						},
 					},
+					{
+						label: "Examples",
+						icon: "pi pi-calculator",
+						command: () => {
+							window.location.href = "examples.html";
+						},
+					},
+					{
+						label: "Contact",
+						icon: "pi pi-envelope",
+						command: () => {
+							window.location.href =
+								"mailto:anniek.barendregt@transportingwheels.com";
+						},
+					},
 				];
 
 				const terms = [
@@ -361,7 +376,7 @@
 					<div class="flex flex-column app">
 						<Menubar model={items} />
 						<ScrollTop />
-						<div class="flex flex-column pt-4 pb-0 px-25">
+						<div class="flex flex-column py-4 px-25">
 							<DataTable value={terms} size="large">
 								<Column
 									field="term"

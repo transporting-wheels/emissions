@@ -152,6 +152,7 @@
 				Accordion,
 				AccordionTab,
 				Button,
+				ButtonGroup,
 				Fieldset,
 				Menubar,
 				ScrollTop,
@@ -242,6 +243,21 @@
 						icon: "pi pi-book",
 						command: () => {
 							window.location.href = "terms.html";
+						},
+					},
+					{
+						label: "Examples",
+						icon: "pi pi-calculator",
+						command: () => {
+							window.location.href = "examples.html";
+						},
+					},
+					{
+						label: "Contact",
+						icon: "pi pi-envelope",
+						command: () => {
+							window.location.href =
+								"mailto:anniek.barendregt@transportingwheels.com";
 						},
 					},
 				];
@@ -348,7 +364,7 @@
 											src="gears.jpg"
 										/>
 									</div>
-									<div class="flex flex-column flex-2 justify-space-between align-items-center gap-5">
+									<div class="flex flex-column flex-2 justify-content-between align-items-center gap-5">
 										<div class="flex flex-column gap-2">
 											<p class="mbs-0 mbe-0">
 												We have developed open source
@@ -378,17 +394,30 @@
 												some key terms and concepts.
 											</p>
 										</div>
-										<Button
-											style={{
-												backgroundColor: "#276141",
-											}}
-											label="Terms"
-											icon="pi pi-book"
-											onClick={() => {
-												window.location.href =
-													"terms.html";
-											}}
-										/>
+										<div class="flex flex-row justify-content-center gap-1 w-full">
+											<Button
+												style={{
+													backgroundColor: "#276141",
+												}}
+												label="Terms"
+												icon="pi pi-book"
+												onClick={() => {
+													window.location.href =
+														"terms.html";
+												}}
+											/>
+											<Button
+												style={{
+													backgroundColor: "#276141",
+												}}
+												label="Examples"
+												icon="pi pi-calculator"
+												onClick={() => {
+													window.location.href =
+														"examples.html";
+												}}
+											/>
+										</div>
 									</div>
 								</div>
 
