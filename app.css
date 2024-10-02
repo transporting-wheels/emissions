@@ -115,10 +115,34 @@ hr {
     }
 
     .sm-flex-column {
+        display: flex !important;
+    }
+
+    .sm-flex-column {
         flex-direction: column !important;
     }
 
     .h-400 {
         height: fit-content;
+    }
+
+    .sm-pt-4 {
+        padding-top: 1.5em !important;
+    }
+
+    .sm-gap-4 {
+        gap: 1.5em !important;
+    }
+
+    .sm-gap-5 {
+        gap: 2em !important;
+    }
+
+    .sm-h-full {
+        height: 100%;
+    }
+
+    .sm-flex-1 {
+        flex: 1 1 0% !important;
     }
 }
