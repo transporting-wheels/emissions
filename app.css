@@ -1,0 +1,120 @@
+.app {
+    height: fit-content;
+    font-family: "Open Sauce One", sans-serif;
+    color: #101010;
+    background-color: #eeece8;
+}
+
+.h-400 {
+    height: 400px;
+}
+
+.mbs-0 {
+    margin-block-start: 0;
+}
+
+.mbe-0 {
+    margin-block-end: 0;
+}
+
+.mis-0 {
+    margin-inline-start: 0;
+}
+
+.mie-0 {
+    margin-inline-end: 0;
+}
+
+.px-25 {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.flex-2 {
+    flex: 2 1 0% !important;
+}
+
+.cover {
+    object-fit: cover;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 16pt;
+}
+
+.logo-element {
+    fill: #276141;
+    stroke-width: 0px;
+}
+
+.title {
+    color: #eeece8;
+    background-color: #276141;
+}
+
+p {
+    font-size: 14pt;
+    line-height: 18pt;
+}
+
+hr {
+    height: 1px;
+    background-color: #276141;
+}
+
+.p-fieldset-legend a {
+    background-color: #276141;
+    color: #eeece8 !important;
+}
+
+.p-fieldset {
+    background-color: #eeece8;
+    border-color: #276141;
+}
+
+.p-fieldset-content {
+    background-color: #eeece8;
+}
+
+@media (max-width: 1200px) {
+    .px-25 {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+@media (max-width: 992px) {
+    .px-25 {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 800px) {
+    .px-25 {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .px-25 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .sm-hidden {
+        display: none !important;
+    }
+
+    .sm-flex-column {
+        flex-direction: column !important;
+    }
+
+    .h-400 {
+        height: fit-content;
+    }
+}
